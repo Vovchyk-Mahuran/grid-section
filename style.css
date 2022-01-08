@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+p,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+.project {
+  background-color: hsl(0, 0%, 81%);
+}
+
+.people-sections {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 150px repeat(4, minmax(320px, 1fr)) 150px;
+  grid-template-rows: 100px repeat(2, 1fr) 100px;
+  gap: 20px;
+  grid-template-areas:
+    "daniel jonathan kira"
+    "jeanette patrick kira";
+}
+.photo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.text-container {
+  max-width: 544px;
+  margin: 0 20px;
+}
+section {
+  padding: 30px;
+  border-radius: 20px;
+}
+.minisection {
+  max-width: 400px;
+}
+.photo img {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-right: 15px;
+}
+.name {
+  color: hsl(210, 46%, 95%);
+  margin-bottom: 5px;
+  font-size: 17px;
+}
+.status {
+  color: hsl(210, 46%, 95%, 0.5);
+  font-size: 17px;
+}
+.main-words {
+  margin-bottom: 20px;
+  font-size: 19px;
+  color: hsl(210, 46%, 95%);
+}
+.descr {
+  color: hsl(210, 46%, 95%, 0.7);
+}
+.black {
+  color: hsl(217, 19%, 35%);
+}
+.halfblack {
+  color: hsl(217, 19%, 35%, 0.5);
+}
+.citate {
+  color: hsl(217, 19%, 35%, 0.7);
+}
+.daniel-section {
+  background-color: hsl(263, 55%, 52%);
+  grid-area: daniel;
+  grid-column: 2/4;
+  grid-row: 2/3;
+}
+.jonathan-section {
+  background-color: hsl(217, 19%, 35%);
+  grid-area: jonathan;
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+.jeanette-section {
+  background-color: hsl(0, 0%, 100%);
+  grid-area: jeanette;
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.patrick-section {
+  background-color: hsl(219, 29%, 14%);
+  grid-area: patrick;
+  grid-column: 3/5;
+  grid-row: 3/4;
+}
+.kira-section {
+  background-color: hsl(0, 0%, 100%);
+  grid-area: kira;
+  grid-column: 5/6;
+  grid-row: 2/4;
+}
+@media (max-width: 1375px) {
+  section {
+    padding: 15px;
+  }
+  .people-sections {
+    grid-template-columns: 10px repeat(4, minmax(260px, 1fr)) 10px;
+    grid-template-rows: 60px repeat(2, 1fr) 60px;
+  }
+  .status {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1140px) {
+  .people-sections {
+    grid-template-columns: 10px repeat(4, minmax(240px, 1fr)) 10px;
+    grid-template-rows: 40px repeat(2, 1fr) 40px;
+    gap: 10px;
+  }
+}
+@media (max-width: 1023px) {
+  .people-sections {
+    grid-template-columns: 0.7fr;
+    grid-template-rows: 50px 0.95fr minmax(100px, 300px) minmax(100px, 300px) 0.95fr 1.15fr 50px;
+    grid-template-areas: "daniel" "jonathan" "jeanette" "patrick" "kira";
+    margin: 0 auto;
+    max-width: 500px;
+  }
+  .minisection {
+    max-width: none;
+    max-height: 100%;
+  }
+  .daniel-section {
+    grid-column: 1/2;
+    grid-row-start: 2;
+  }
+  .jonathan-section {
+    grid-column: 1/2;
+    grid-row-start: 3;
+  }
+  .jeanette-section {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .patrick-section {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  .kira-section {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+}
+@media (max-width: 475px) {
+  .people-sections {
+    max-width: 420px;
+  }
+}
+@media (max-width: 426px) {
+  .people-sections {
+    max-width: 410px;
+    margin: 0 auto;
+  }
+  .main-words {
+    font-size: 14px;
+  }
+  .name,
+  .status {
+    font-size: 12px;
+  }
+  .descr {
+    font-size: 11px;
+  }
+}
